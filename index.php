@@ -1,17 +1,32 @@
 <?php
 require_once 'src/model/Conexao.php';
+require_once 'src/model/JogoModel.php';
 
-echo "--- Testando a Conexão (Padrão Singleton) ---<br>";
+$pdo = Conexao::getConexao();
 
-$pdo1 = Conexao::getConexao();
-echo "Conexão 1 obtida.<br>";
+$jogoModel = new JogoModel($pdo);
 
-$pdo2 = Conexao::getConexao();
-echo "Conexão 2 obtida.<br>";
+$acao = $_GET['acao'] ?? 'listar';
+$busca = $_GET['busca'] ?? '';
 
-echo"<br>";
-var_dump($pdo1);
-echo "<br>";
-var_dump($pdo2);
+switch ($acao) {
+    case 'cadastrar':
+        echo "Página de Cadastro (em breve)";
+        break;
 
+    case 'editar':
+        echo "Página de edição (em breve)";
+        break;
+    
+    case 'excluir':
+        echo "Ação de Excluir (em breve)";
+        break;
+
+    case 'listar':
+    default:
+        $jogo = $jogoModel->listarJogos($busca);
+
+        require_once 'views/listar_jogos.php';
+        break;
+}
 ?>
