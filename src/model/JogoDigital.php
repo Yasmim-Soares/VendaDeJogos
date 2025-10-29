@@ -1,5 +1,5 @@
 <?php
-require_once 'Jogo.php';
+require_once 'src/model/Jogo.php';
 
 class JogoDigital extends Jogo{
     private $linkDownload;
