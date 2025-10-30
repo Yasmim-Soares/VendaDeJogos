@@ -1,5 +1,5 @@
 <?php
-require_once 'src/interfaces/iVendavel.php';
+namespace App\Model;
 
 abstract class Jogo implements iVendavel{
     protected $nome;

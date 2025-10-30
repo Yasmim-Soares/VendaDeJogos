@@ -1,5 +1,8 @@
 <?php
+namespace App\Model;
 
+use PDO;
+use PDOException;
 class Conexao{
     private const HOST = 'localhost';
     private const DB_NAME = 'lojajogos';

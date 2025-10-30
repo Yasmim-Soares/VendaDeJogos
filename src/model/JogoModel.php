@@ -1,5 +1,8 @@
 <?php
+namespace App\Model;
 
+use PDO;
+use PDOException;
 class JogoModel {
     private $pdo;
 

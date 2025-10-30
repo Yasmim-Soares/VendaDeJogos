@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Model;
 class carrinhoDeCompras{
     private $itens = [];
     

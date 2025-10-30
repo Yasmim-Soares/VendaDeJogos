@@ -1,6 +1,7 @@
 <?php
-require_once 'src/model/Conexao.php';
-require_once 'src/model/JogoModel.php';
+require_once 'vendor/autoload.php';
+use App\Model\Conexao;
+use App\Model\JogoModel;
 
 $pdo = Conexao::getConexao();
 
@@ -26,7 +27,7 @@ switch ($acao) {
     default:
         $jogo = $jogoModel->listarJogos($busca);
 
-        require_once 'views/listar_jogos.php';
+        require_once 'view/listarJogos.php';
         break;
 }
 ?>

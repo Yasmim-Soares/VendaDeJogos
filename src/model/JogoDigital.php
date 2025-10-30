@@ -1,6 +1,5 @@
 <?php
-require_once 'src/model/Jogo.php';
-
+namespace App\Model;
 class JogoDigital extends Jogo{
     private $linkDownload;
     

@@ -1,0 +1,23 @@
+{
+    "name": "0000626e/loja-jogos",
+    "autoload": {
+        "psr-4": {
+            "0000626e\\LojaJogos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yasmim"
+        }
+    ],
+    "require": {},
+
+    "autoload":{
+        "psr-4": {
+            "App\\": "src/"       
+       },
+       "files":[
+        "src/Helpers/apiHelpers.php"
+       ]
+    }
+}
