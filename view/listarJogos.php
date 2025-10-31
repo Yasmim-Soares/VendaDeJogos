@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h1>Loja de Jogos/h1>
+        <h1>Loja de Jogos</h1>
     </header>
 
     <h2>Nossos jogos</h2>
@@ -37,6 +37,7 @@
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($jogo['nome']) . "</td>";
                     echo "<td>R$ " . number_format($jogo['preco'], 2, ',', '.') . "</td>";
+                    echo "<td>" . htmlspecialchars($jogo['tipo']) . "</td>";
                     echo "<td>";
                     echo "<a href='index.php?acao=editar&id=" . $jogo['id'] . " '>Editar</a>|";
                     echo "<a href='index.php?acao=excluir&id=" . $jogo['id'] . "'>Excluir</a>";
