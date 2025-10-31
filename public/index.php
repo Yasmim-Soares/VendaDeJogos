@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 use App\Model\Conexao;
 use App\Model\JogoModel;
 
@@ -25,9 +25,9 @@ switch ($acao) {
 
     case 'listar':
     default:
-        $jogo = $jogoModel->listarJogos($busca);
+        $jogos = $jogoModel->listarJogos($busca);
 
-        require_once 'view/listarJogos.php';
+        require_once '../view/listarJogos.php';
         break;
 }
 ?>
